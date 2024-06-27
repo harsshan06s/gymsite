@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle1 24 Hour Gym - The Fitness Centre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        header {
+            background-color: #000;
+            color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        .hero {
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+            margin-top: 60px;
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .hero h1, .hero h2 {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .cta-button {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-button:hover {
+            background-color: #e60000;
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background-color: #f4f4f4;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, select {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+        button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            cursor: pointer;
+        }
+        .package, .offer, .gear, .supplement {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://static.vecteezy.com/system/resources/previews/003/108/337/non_2x/fitness-gym-logo-with-strong-athlete-and-barbell-vector.jpg" alt="Muscle1 24 Hour Gym Logo" class="logo"> 
+        <nav>
+            <a href="#registration">Registration</a>
+            <a href="#packages">Packages</a>
+            <a href="#timings">Timings</a>
+            <a href="#offers">Offers</a>
+            <a href="#gears">Gym Gears</a>
+            <a href="#nutrition">Nutrition & Supplements</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>MUSCLE1 24 HOUR GYM</h1>
+        <h2>The Fitness Centre</h2>
+        <a href="#registration" class="cta-button">JOIN NOW</a>
+    </section>
+
+    <section id="registration">
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <select id="packageSelect" required>
+                <option value="">Select a Package</option>
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+                <option value="elite">Elite</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="packages">
+        <h2>Packages</h2>
+        <div class="package">
+            <h3>Basic</h3>
+            <p>Access to gym equipment, $29.99/month</p>
+        </div>
+        <div class="package">
+            <h3>Premium</h3>
+            <p>Gym access + 2 classes/week, $49.99/month</p>
+        </div>
+        <div class="package">
+            <h3>Elite</h3>
+            <p>24/7 access + unlimited classes, $79.99/month</p>
+        </div>
+    </section>
+
+    <section id="timings">
+        <h2>Timings</h2>
+        <p>Open 24 hours, 7 days a week</p>
+        <p>Staff available: Monday-Friday 6am-10pm, Saturday-Sunday 8am-8pm</p>
+    </section>
+
+    <section id="offers">
+        <h2>Current Offers</h2>
+        <div class="offer">
+            <h3>Summer Special</h3>
+            <p>Join now and get 1 month free!</p>
+        </div>
+        <div class="offer">
+            <h3>Bring a Friend</h3>
+            <p>Refer a friend and both get 20% off for 3 months</p>
+        </div>
+    </section>
+
+    <section id="gears">
+        <h2>Gym Gears</h2>
+        <div class="gear">
+            <h3>Fitness Factory T-Shirt</h3>
+            <p>$19.99</p>
+        </div>
+        <div class="gear">
+            <h3>Water Bottle</h3>
+            <p>$9.99</p>
+        </div>
+    </section>
+
+    <section id="nutrition">
+        <h2>Nutrition & Supplements</h2>
+        <div class="supplement">
+            <h3>Whey Protein</h3>
+            <p>2lbs for $29.99</p>
+        </div>
+        <div class="supplement">
+            <h3>Pre-Workout</h3>
+            <p>30 servings for $39.99</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 The Fitness Centre. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for registering! We will contact you soon.');
+        });
+
+        const packages = document.querySelectorAll('.package');
+        packages.forEach(package => {
+            package.addEventListener('click', function() {
+                this.style.backgroundColor = '#ff0000';
+                this.style.color = '#fff';
+            });
+        });
+
+        const offers = document.querySelectorAll('.offer');
+        offers.forEach(offer => {
+            offer.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            offer.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        const gears = document.querySelectorAll('.gear');
+        gears.forEach(gear => {
+            gear.addEventListener('click', function() {
+                alert('Item added to cart!');
+            });
+        });
+
+        const supplements = document.querySelectorAll('.supplement');
+        supplements.forEach(supplement => {
+            supplement.addEventListener('click', function() {
+                alert('Item added to cart!');
+            });
+        });
+
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                const headerOffset = 60;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        document.querySelectorAll('nav a, .cta-button').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                smoothScroll(target);
+            });
+        });
+    </script>
+</body>
+</html>
